@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Contact Us</title>
+  <style>
+    body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f6f8;
+  color: #333;
+}
+
+header {
+  background-color: #2c3e50;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+
+nav {
+  margin-top: 10px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+main {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="file"] {
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+button {
+  margin-top: 20px;
+  padding: 12px;
+  background-color: #27ae60;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #219150;
+}
+
+footer {
+  background-color: #2c3e50;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  margin-top: 50px;
+}
+
+    /* (your existing styles here, not repeated for brevity) */
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Apply for a Job</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="job.html">Jobs</a>
+    </nav>
+  </header>
+
+  <main>
+    <form id="jobForm">
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" name="name" required><br>
+
+      <label for="email">Email Address:</label>
+      <input type="email" id="email" name="email" required><br>
+
+      <label for="resume">Upload Resume:</label>
+      <input type="file" id="resume" name="resume"><br>
+
+      <button type="submit">Submit Application</button>
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 JobFinder</p>
+  </footer>
+
+  <!-- JavaScript for redirecting to thankyou.html -->
+  <script>
+    document.getElementById('jobForm').addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent actual form submission
+
+      // You can add validation or save logic here if needed
+
+      // Redirect to thankyou.html
+      window.location.href = "thankyou.html";
+    });
+  </script>
+</body>
+</html>
